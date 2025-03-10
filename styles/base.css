@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --primary: #084c61;
   --danger: #db504a;
@@ -70,9 +72,13 @@ nav a:hover {
   color: var(--warning);
 }
 
-
 main {
-  padding: 1rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 main h1 {
@@ -81,6 +87,21 @@ main h1 {
   text-decoration-line: underline;
 }
 
+.col-grid-1 {
+  grid-column: span 1;
+}
+.col-grid-2 {
+  grid-column: span 2;
+}
+.col-grid-3 {
+  grid-column: span 3;
+}
+.col-grid-4 {
+  grid-column: span 4;
+}
+.col-grid-5 {
+  grid-column: span 5;
+}
 .card {
   border: 1px solid black;
   border-radius: 0.25rem;
@@ -93,33 +114,25 @@ main h1 {
   background-color: var(--info);
 }
 
-.card ul {
-  list-style-type: none;
-  padding: 0.5rem;
-}
-
-.card li {
-  margin: 0.5rem 0.5rem;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.card li a {
-  transition: all 0.25s ease-out;
-  color: blue;
-}
-
-.card li a:hover {
-  font-weight: 600;
-}
-
-.card div {
+.card .body {
   padding: 0.5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
+  overflow: auto;
+}
+.card .text-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.text-image img {
+  border-radius: 1rem;
+}
+.text-image p {
+  padding: 1rem;
+  flex: 1;
 }
 
 footer {
@@ -132,102 +145,22 @@ footer {
   color: var(--font-color);
   background-color: var(--primary);
 }
-
+footer a {
+  color: var(--warning);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
 #lastModified {
   color: var(--warning);
 }
 
-.flag {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.row-footer {
-  text-align: center;
-}
-
-.flag img {
-  width: 20px;
-}
-
-/* Chambser site css */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Roboto", Arial, sans-serif;
-}
-
-.container {
-  margin: auto;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow-y: hidden;
-}
-
-section {
-  padding: 1rem 0;
-}
-
-section p {
-  text-align: center;
-  padding: 0.5rem;
-}
-
-section h1 {
-  text-align: center;
-  padding: 0.5rem;
-}
-
-section ol li {
-  padding: 0.5rem;
-}
-
-section img {
-  padding: 0.5rem;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero img {
-  width: 50%;
-  height: auto;
-}
-
-.hero-text {
-  color: var(--font-color);
-  position: absolute;
-  font-size: 1rem;
-  top: 1rem;
-  left: 55%;
-  padding: 0.5rem;
-  background-color: #fff2;
-  width: 20%;
-  border-radius: 1.3rem;
-}
-
-.google-maps {
-  width: 100%;
-  position: relative;
-  text-align: center;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-}
-
-.google-maps iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+@media screen and (max-width: 500px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .card .text-image {
+    flex-direction: column;
+  }
 }
