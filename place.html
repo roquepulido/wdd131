@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 - Dynamic Web Fundamentals - Roque Pulido</title>
+    <meta name="description"
+        content="Dynamic Web Fundamentals for WDD 131 at Brigham Young University Idaho, made by Roque Pulido, content includes HTML, CSS, and JavaScript." />
+    <meta name="keywords" content="WDD 131, BYU, Brigham Young University Idaho, Roque Pulido, HTML, CSS, JavaScript" />
+    <meta name="author" content="Roque Pulido" />
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="stylesheet" href="./styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="./scripts/place.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="headerTitle">
+            <h1>Yucatan State, México</h1>
+        </div>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="./images/hero.jpg" media="(min-width: 1000px)">
+            <img src="./images/hero-mobile.jpg" alt="hero">
+        </picture>
+        <section id="data">
+            <h2>Data</h2>
+            <div class="dataContainer">
+                <div class="dataItem">
+                    <h3>Area:</h3>
+                    <p>1,528 km<sup>2</sup></p>
+                </div>
+                <div class="dataItem">
+                    <h3>Population:</h3>
+                    <p>1 316 088</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Capital:</h3>
+                    <p>Mérida</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Languages:</h3>
+                    <p>Spanish, Maya</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Currency:</h3>
+                    <p>MXN Peso</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Time Zone:</h3>
+                    <p>UTC-6</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Calling Code:</h3>
+                    <p>+52 999</p>
+                </div>
+                <div class="dataItem">
+                    <h3>Internet TLD:</h3>
+                    <p>.mx</p>
+                </div>
+            </div>
+        </section>
+        <section id="weather">
+            <h2>Weather</h2>
+            <div class="weatherContainer">
+                <div class="weatherItem">
+                    <img src="images/sun-cloud.svg" alt="weather icon" id="weatherIcon">
+                </div>
+                <div class="weatherItem">
+                    <h3>Temperature:</h3>
+                    <p id="temperature">30 °C</p>
+                </div>
+                <div class="weatherItem">
+                    <h3>Conditions:</h3>
+                    <p id="conditions">60%</p>
+                </div>
+                <div class="weatherItem">
+                    <h3>Wind Speed:</h3>
+                    <p id="windSpeed">10 km/h</p>
+                </div>
+                <div class="weatherItem" id="windChill">
+                    <h3>Wind Chill:</h3>
+                    <p id="windChillData">5°C</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+            <span>-</span>
+            <span> <a href="https://github.com/roquepulido" target="_blank">Roque A. Pulido</a> </span>
+            <span>-</span>
+            <span>Mérida, Yucatán</span>
+            <img src="images/Flag_of_the_Republic_of_Yucatan.svg" alt="flag">
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

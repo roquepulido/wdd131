@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary: #006847;
+  --danger: #ce1126;
+  --warning: #e3b505;
+  --secondary: #4f6d7a;
+  --info: #56a3a6;
+  --font-color: azure;
+  --font-color-dark: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", system-ui;
+}
+
+body {
+  max-width: 1500px;
+  min-height: 100vh;
+  min-width: 450px;
+  margin: auto;
+}
+
+header {
+  background-color: var(--danger);
+}
+
+header h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--font-color);
+  font-family: "Anton", sans-serif;
+}
+
+main {
+  background-color: var(--primary);
+}
+main picture {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main picture img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+/* Weather styles */
+.weatherContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#weather {
+  color: var(--font-color);
+}
+
+#weather h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Anton", sans-serif;
+}
+.weatherItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.weatherItem img {
+  max-width: 25%;
+  max-height: 25%;
+  margin: auto;
+}
+/* Data styles */
+
+#data {
+  color: var(--font-color);
+}
+
+#data h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Anton", sans-serif;
+}
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.dataItem{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.dataItem img {
+  max-width: 25%;
+  max-height: 25%;
+  margin: auto;
+}
+/* Footer styles */
+footer {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--font-color);
+  background-color: var(--danger);
+}
+footer a {
+  color: var(--warning);
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+#lastModified {
+  color: var(--warning);
+}
+.headerTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer img {
+  margin-left: 1rem;
+  height: 1.5rem;
+  border: solid 1px var(--font-color-dark);
+}

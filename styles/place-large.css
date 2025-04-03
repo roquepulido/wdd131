@@ -1,0 +1,64 @@
+@media screen and (min-width: 1000px) {
+  main {
+    display: flex;
+    position: relative;
+    height: 100vh;
+  }
+
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  picture img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  #data {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border: solid 1px var(--font-color);
+    color: var(--font-color-dark);
+    z-index: 2;
+  }
+  
+  #data h2 {
+    align-self: flex-end;
+    padding: 0 3rem;
+    color: var(--font-color);
+    background-color: var(--danger);
+  }
+
+  #weather {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 400px;
+    padding: 10px;
+    border: solid 1px var(--font-color);
+    color: var(--font-color-dark);
+    z-index: 2;
+  }
+
+   #weather h2 {
+    align-self: flex-start;
+    padding: 0 3rem;
+    color: var(--font-color);
+    background-color: var(--danger);
+  }
+}
