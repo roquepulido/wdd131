@@ -61,4 +61,7 @@
     color: var(--font-color);
     background-color: var(--danger);
   }
+  #weather h2::after {
+    content: " :)";
+  }
 }
