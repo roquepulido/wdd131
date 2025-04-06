@@ -238,6 +238,11 @@ label .optional {
   font-size: 0.8rem;
   color: var(--secondary);
 }
+.label {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
 #productName{
   text-transform: capitalize;
   padding: .5rem;

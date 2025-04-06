@@ -9,6 +9,15 @@ const getStars = (rating) => {
   const stars = "★".repeat(rating) + "☆".repeat(5 - rating); // Create a string of stars
   return stars; // Return the stars string
 };
+function formatDateToMMMDDYYYY(dateString) {
+  const date = new Date(dateString);
+
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short", // MMM (abreviatura del mes)
+    day: "numeric", // DD
+    year: "numeric", // YYYY
+  }).format(date);
+}
 
 const renderReviewCard = (productReview = null) => {
   if (productReview) {
@@ -26,7 +35,7 @@ const renderReviewCard = (productReview = null) => {
               </p>
               <p>
                 <b>Date of installation:</b>
-                ${productReview.dateInstallation}
+                ${formatDateToMMMDDYYYY(productReview.dateInstallation)}
               </p>
                 <ul>
                     <li><b>Features Selected:</b></li>
