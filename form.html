@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 - Dynamic Web Fundamentals - Roque Pulido</title>
+    <meta name="description"
+        content="Dynamic Web Fundamentals for WDD 131 at Brigham Young University Idaho, made by Roque Pulido, content includes HTML, CSS, and JavaScript." />
+    <meta name="keywords" content="WDD 131, BYU, Brigham Young University Idaho, Roque Pulido, HTML, CSS, JavaScript" />
+    <meta name="author" content="Roque Pulido" />
+    <link rel="stylesheet" href="./styles/form.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+
+    <script src="./scripts/form.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            WDD 131 - Dynamic Web Fundamentals -
+            <span class="secondary-color">Roque Pulido</span> - Form
+        </h1>
+    </header>
+
+    <main>
+        <form action="./review.html" class="card col-grid-3-center" method="get" id="productReviewForm">
+            <h2 class="title">Product Review</h2>
+            <div class="body">
+                <label>Product Name
+                    <select name="productName" id="productName" required>
+                        <option value="" disabled selected>Select a product</option>
+                    </select>
+                </label>
+                <label>Overall Rating
+                    <div class="rating">
+                        <input type="radio" name="productRating" id="productRating1" value="1" required />
+                        <label for="productRating1">&star;</label>
+                        <input type="radio" name="productRating" id="productRating2" value="2" required />
+                        <label for="productRating2">&star;&star;</label>
+                        <input type="radio" name="productRating" id="productRating3" value="3" required />
+                        <label for="productRating3">&star;&star;&star;</label>
+                        <input type="radio" name="productRating" id="productRating4" value="4" required />
+                        <label for="productRating4">&star;&star;&star;&star;</label>
+                        <input type="radio" name="productRating" id="productRating5" value="5" required />
+                        <label for="productRating5">&star;&star;&star;&star;&star;</label>
+                    </div>
+                </label>
+                <label>Date of installation
+                    <input type="date" name="dateInstallation" id="dateInstallation" required />
+                </label>
+                <label>Which features did you find useful in the product?
+                    (Check all that apply)
+                </label>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="features" id="features1" value="Durabillity" />
+                    <label for="features1">Durabillity</label>
+                    <input type="checkbox" name="features" id="features2" value="Ease of Use" />
+                    <label for="features2">Ease of Use</label>
+                    <input type="checkbox" name="features" id="features3" value="Performance" />
+                    <label for="features3">Performance</label>
+                    <input type="checkbox" name="features" id="features4" value="Desing" />
+                    <label for="features4">Desing</label>
+                </div>
+                <label>Written Review <span class="optional">(Optional)</span>
+                    <textarea name="writtenReview" id="writtenReview" rows="5"></textarea>
+                </label>
+                <label>Your Name<span class="optional">(Optional)</span>
+                    <input type="text" name="userName" id="userName" />
+                </label>
+                <button type="submit">Post Review</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>
+            <span id="currentyear"></span>
+            <span>-</span>
+            <span> <a href="https://github.com/roquepulido" target="_blank">Roque A. Pulido</a> </span>
+            <span>-</span>
+            <span>Mérida, Yucatán</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+    <div id="spinner">
+        <div class="css-spinner"></div>
+    </div>
+</body>
+
+</html>
