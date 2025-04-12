@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gotta Analyze 'Em All! - TCG</title>
+
+    <meta name="description"
+        content="Dynamic Web Fundamentals for WDD 131 at Brigham Young University Idaho, made by Roque Pulido, content includes HTML, CSS, and JavaScript." />
+    <meta name="keywords" content="WDD 131, BYU, Brigham Young University Idaho, Roque Pulido, HTML, CSS, JavaScript" />
+    <meta name="author" content="Roque Pulido" />
+
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Limelight&display=swap"
+        rel="stylesheet">
+    <script src="./scripts/tgc.js" type="module"></script>
+
+</head>
+
+<body>
+    <header id="headerContent">
+        <h1 class="font-pokemon">Gotta Analyze 'Em All!</h1>
+        <h3>Explore Pokémon Stats & TCG Data</h3>
+    </header>
+    <nav>
+        <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./pokedex.html">Pokédex</a></li>
+            <li><a class="active" href="./tcg-gallery.html">TCG Gallery</a></li>
+        </ul>
+    </nav>
+
+    <body>
+        <section id="searchSection">
+            <h2>Find a Pokémon TCG</h2>
+            <div class="input-container">
+                <label for="pokemonName">Enter Pokémon Name or card name:</label>
+                <div class="input-suggestions">
+                    <input type="text" id="pokemonName" name="pokemonName" required placeholder="e.g., Pikachu"
+                        autocomplete="off">
+                </div>
+            </div>
+            <button id="searchButton">Search</button>
+        </section>
+        <section id="cardsSection">
+            <div class="title-card">
+                <h2>Pokémon TCG Cards</h2>
+                <div>
+                    <button id="sortButton" data-order="asc">Sort by Price</button>
+                </div>
+            </div>
+
+            <div id="cardsContainer">
+            </div>
+        </section>
+        <div>
+        </div>
+    </body>
+    <footer id="footerContent">
+        <p>
+            <span id="currentyear"></span>
+            <span>-</span>
+            <span> <a href="https://github.com/roquepulido" target="_blank">Roque A. Pulido</a> </span>
+            <span>-</span>
+            <span>Mérida, Yucatán</span>
+        </p>
+        <p><span id="lastModified"></span></p>
+        <p>Special thanks: <a href="https://pokemontcg.io/" target="_blank">pokemontcg.io</a>, <a
+                href="https://pokeapi.co/" target="_blank">pokeapi.co</a>, for the API REST service and <a
+                href="https://www.chartjs.org/" target="_blank">pokemontcg.io</a> for chart solution and <a
+                href="https://sweetalert2.github.io/" target="_blank">sweetalert2</a> for toast alert solution.</p>
+    </footer>
+    <div id="spinner">
+        <div class="css-spinner"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

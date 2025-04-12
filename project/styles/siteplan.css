@@ -1,11 +1,18 @@
 :root {
-  --primary: #3c80bd; /* Deep blue (trust, scripture, divinity) */
-  --danger: #d9534f; /* Soft red (alert/warning, but not harsh) */
-  --warning: #f0ad4e; /* Warm gold (caution/attention) */
-  --secondary: #6c757d; /* Neutral gray (supporting elements) */
-  --info: #5bc0de; /* Calm blue (hints, helpful info) */
-  --font-color: #333333; /* Dark gray (main text, easy to read) */
-  --font-color-dark: #1a1a1a; /* Near-black (headings, emphasis) */
+  --primary: #ff0000; /* Pokémon Red (Primary Brand Color) */
+  --danger: #cc0000; /* Darker Red (Error/Alerts) */
+  --warning: #ffde00; /* Pikachu Yellow (Warnings) */
+  --secondary: #3b4cca; /* Pokémon Blue (Secondary Color) */
+  --info: #0075be; /* Lighter Blue (Info/Water-Type) */
+  --font-color: #2a2a2a; /* Dark Gray (Main Text) */
+  --font-color-dark: #000000; /* Pure Black (Headings) */
+  --grass-type: #78c850; /* Bulbasaur Green */
+  --fire-type: #f08030; /* Charizard Orange */
+  --water-type: #6890f0; /* Squirtle Blue */
+  --electric-type: #f8d030; /* Pikachu Yellow (Brighter) */
+  --pokeball-accent: #ffffff; /* White (For Contrast) */
+  --rare: #f5d23b;
+  --gold: ##d4af37;
 }
 
 * {
@@ -14,19 +21,23 @@
   box-sizing: border-box;
 }
 /* Reset default margins/padding for lists */
-  ol, ul {
-    margin: 0;
-    padding-left: 20px; /* Adjust this value for indentation */
-  }
+ol,
+ul {
+  margin: 0;
+  padding-left: 20px; /* Adjust this value for indentation */
+}
 
-  /* If you want different indentation for different levels */
-  ol ol, ol ul, ul ol, ul ul {
-    padding-left: 30px; /* More indentation for nested lists */
-  }
+/* If you want different indentation for different levels */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  padding-left: 30px; /* More indentation for nested lists */
+}
 
-  li {
-    margin-bottom: 5px; /* Adds space between list items */
-  }
+li {
+  margin-bottom: 5px; /* Adds space between list items */
+}
 
 h1,
 h2,
@@ -78,14 +89,14 @@ section {
   background-color: #4a91e233;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.486);
 }
-footer{
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-footer p{
- margin: auto;
+footer p {
+  margin: auto;
 }
 /* Bacjkground color for the entire page */
 .bg-primary {
@@ -148,13 +159,12 @@ footer p{
   width: 100%;
   padding: 2rem 0;
 }
-.color-schema-container div>p:first-child{
+.color-schema-container div > p:first-child {
   font-size: 1.3rem;
   font-weight: 900;
 }
-.wireframe{
+.wireframe {
   max-width: 100%;
   display: block;
   margin: 0 auto;
 }
-
